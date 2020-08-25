@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>栅格布局</title>
+    <!--移动设备优先-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <!--引入bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .row{
+            border: dashed 1px red;
+            margin: 10px 0;
+            height: 100px;
+        }
+        .ca{
+            border: solid 1px blue;
+            background: #EFEFEF;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!--根据屏幕大小自动显示样式-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="ca col-sm">第一列</div>
+            <div class="ca col-sm">第二列</div>
+            <div class="ca col-sm">第三列</div>
+        </div>
+    </div>
+
+    <!--列居中-->
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="ca col-sm">第一列</div>
+            <div class="ca col-sm">第二列</div>
+            <div class="ca col-sm">第三列</div>
+        </div>
+    </div>
+
+    <!--底部-->
+    <div class="container-fluid">
+        <div class="row align-items-end">
+            <div class="ca col-sm">第一列</div>
+            <div class="ca col-sm">第二列</div>
+            <div class="ca col-sm">第三列</div>
+        </div>
+    </div>
+
+    <!--列对齐-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="ca col-sm align-self-end">第一列</div>
+            <div class="ca col-sm align-self-center">第二列</div>
+            <div class="ca col-sm">第三列</div>
+        </div>
+    </div>
+
+    <!--行居中-->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="ca col-sm-3">第一列</div>
+            <div class="ca col-sm-3">第二列</div>
+            <div class="ca col-sm-3">第三列</div>
+        </div>
+    </div>
+
+    <!--行右对齐-->
+    <div class="container-fluid">
+        <div class="row justify-content-end">
+            <div class="ca col-sm-3">第一列</div>
+            <div class="ca col-sm-3">第二列</div>
+            <div class="ca col-sm-3">第三列</div>
+        </div>
+    </div>
+
+    <!--行等分对齐-->
+    <div class="container-fluid">
+        <div class="row justify-content-around">
+            <div class="ca col-sm-3">第一列</div>
+            <div class="ca col-sm-3">第二列</div>
+            <div class="ca col-sm-3">第三列</div>
+        </div>
+    </div>
+    <!--行两端对齐-->
+    <div class="container-fluid">
+        <div class="row justify-content-between">
+            <div class="ca col-sm-3">第一列</div>
+            <div class="ca col-sm-3">第二列</div>
+            <div class="ca col-sm-3">第三列</div>
+        </div>
+    </div>
+
+    <!--排序-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="ca col-sm-3 order-3">第一列</div>
+            <div class="ca col-sm-3 order-2">第二列</div>
+            <div class="ca col-sm-3 order-1">第三列</div>
+        </div>
+    </div>
+
+    <!--排序-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="ca col-sm-3 order-first">第一列</div>
+            <div class="ca col-sm-3 order-2">第二列</div>
+            <div class="ca col-sm-3 order-1">第三列</div>
+        </div>
+    </div>
+
+    <!--排序-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="ca col-sm-3 order-last">第一列</div>
+            <div class="ca col-sm-3 order-2">第二列</div>
+            <div class="ca col-sm-3 order-1">第三列</div>
+        </div>
+    </div>
+
+    <!--空栅格 offset-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="ca col-sm-3 offset-1">第一列</div>
+            <div class="ca col-sm-3">第二列</div>
+            <div class="ca col-sm-3">第三列</div>
+        </div>
+    </div>
+<br>
+
+    <!--空栅格 offset-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="ca col-sm-3">第一列</div>
+            <div class="ca col-sm-3">第二列</div>
+            <div class="ca col-sm-3 offset-2">第三列</div>
+        </div>
+    </div>
+
+    <!--左右空-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="ca col-sm-3">第一列</div>
+            <div class="ca col-sm-3 ml-1 mr-1">第二列</div>
+            <div class="ca col-sm-3">第三列</div>
+        </div>
+    </div>
+
+    <!--左右空-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="ca col-sm-3 mr-auto">第一列</div>
+            <div class="ca col-sm-3">第二列</div>
+            <div class="ca col-sm-3">第三列</div>
+        </div>
+    </div>
+
+
+
+
+
+
+<script src="js/bootstrap.js"/>
+</body>
+</html>
