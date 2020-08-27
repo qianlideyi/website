@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>栅格布局</title>
+    <!--移动设备优先-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <!--引入bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .row{
+            border: dashed 1px red;
+            margin: 10px 0;
+        }
+        .col-sm, .col-sm-2, .col-sm-5, .col-sm-3, .col-sm-4, .col-sm-6{
+            border: solid 1px blue;
+            background: #EFEFEF;
+        }
+        .wh{
+            width:100px;
+            height:100px;
+            background:#EFEFEF;
+            float:left;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="wh border-success border"></div>
+<div class="wh border-success border-left"></div>
+<div class="wh border-success border-right"></div>
+<div class="wh border-success border-top"></div>
+<div class="wh border-success border-bottom"></div>
+<div class="wh border-success border-danger"></div>
+
+<div style="clear: both"></div>
+<div class="wh border-success border"></div>
+<div class="wh border-success border border-left-0"></div>
+<div class="wh border-success border border-right-0"></div>
+<div class="wh border-success border border-top-0"></div>
+<div class="wh border-success border border-bottom-0"></div>
+
+<div style="clear: both"></div>
+<div class="wh border-success border rounded"></div>
+<div class="wh border-success border rounded-left"></div>
+<div class="wh border-success border rounded-right"></div>
+<div class="wh border-success border rounded-top"></div>
+<div class="wh border-success border rounded-bottom"></div>
+<div class="wh border-success border rounded-circle"></div>
+<div class="wh border-success border rounded-pill"></div>
+<div style="width:200px" class="wh border-success border rounded-pill"></div>
+<div style="width:200px" class="wh border-success border rounded-pill"></div>
+<div style="width:200px" class="wh border-success border rounded-pill"></div>
+<div style="width:200px" class="wh border-success border rounded-pill"></div>
+<div style="width:200px" class="wh border-success border rounded-0"></div>
+<div class="wh border-success border rounded-sm"></div>
+<div class="wh border-success border rounded-lg"></div>
+
+
+
+<span class="text-primary">eduwork</span>
+<span class="text-secondary">eduwork</span>
+<span class="text-success">eduwork</span>
+<span class="text-warning">eduwork</span>
+<span class="text-info">eduwork</span>
+<span class="text-dark">eduwork</span>
+
+
+<script src="js/bootstrap.js"/>
+</body>
+</html>
