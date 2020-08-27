@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>栅格布局</title>
+    <!--移动设备优先-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <!--引入bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+       body{
+           padding: 20px;
+       }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li><a href="#">首页</a></li>
+    <li><a href="#">分类一</a></li>
+    <li><a href="#">分类二</a></li>
+    <li><a href="#">分类三</a></li>
+</ul>
+<ul class="nav">
+    <li><a class="nav-link" href="#">首页</a></li>
+    <li><a class="nav-link" href="#">分类一</a></li>
+    <li><a class="nav-link" href="#">分类二</a></li>
+    <li><a class="nav-link" href="#">分类三</a></li>
+</ul>
+
+<nav class="nav">
+    <a class="nav-link" href="#">首页</a>
+    <a class="nav-link" class="nav-link" href="#">分类一</a>
+    <a class="nav-link" href="#">分类二</a>
+    <a class="nav-link" href="#">分类三</a>
+</nav>
+
+<nav class="nav justify-content-center">
+    <a class="nav-link" href="#">首页</a>
+    <a class="nav-link" class="nav-link" href="#">分类一</a>
+    <a class="nav-link" href="#">分类二</a>
+    <a class="nav-link" href="#">分类三</a>
+</nav>
+
+<br>
+
+<nav class="nav flex-column">
+    <a class="nav-link" href="#">首页</a>
+    <a class="nav-link" class="nav-link" href="#">分类一</a>
+    <a class="nav-link" href="#">分类二</a>
+    <a class="nav-link" href="#">分类三</a>
+</nav>
+
+<br>
+
+<nav class="nav nav-tabs">
+    <a class="nav-item nav-link active" href="#">首页</a>
+    <a class="nav-item nav-link" class="nav-link" href="#">分类一</a>
+    <a class="nav-item nav-link" href="#">分类二</a>
+    <a class="nav-item nav-link" href="#">分类三</a>
+</nav>
+
+<br>
+
+<nav class="nav nav-pills">
+    <a class="nav-item nav-link active" href="#">首页</a>
+    <a class="nav-item nav-link" class="nav-link" href="#">分类一</a>
+    <a class="nav-item nav-link" href="#">分类二</a>
+    <a class="nav-item nav-link" href="#">分类三</a>
+</nav>
+
+
+<br>
+
+<nav class="nav nav-tabs">
+    <a class="nav-item nav-link active" data-toggle="tab" href="#one">首页</a>
+    <a class="nav-item nav-link" data-toggle="tab" class="nav-link" href="#two">分类一</a>
+    <a class="nav-item nav-link" data-toggle="tab" href="#three">分类二</a>
+    <a class="nav-item nav-link" data-toggle="tab" href="#four">分类三</a>
+</nav>
+
+<div>
+    <div id="one" class="tab-pane fade show active">00</div>
+    <div id="two" class="tab-pane fade  active ">1111</div>
+    <div id="three" class="tab-pane fade  active ">22222</div>
+    <div id="four" class="tab-pane fade  active ">33333</div>
+</div>
+
+<script src="js/bootstrap.bundle.js"/>
+</body>
+</html>
