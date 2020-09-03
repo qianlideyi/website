@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <!--引入bootstrap css-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--引入swiper插件-->
-    <link rel="stylesheet" href="css/swiper.css">
 </head>
 <body>
 
@@ -205,26 +203,20 @@
 </section>
 <!--轮播图结束-->
 <!--PC轮播图开始-->
-<style>
-    .z-Sel{
-        background: transparent url('image/bootstrap-icons-1.0.0/arrow-left.svg') no-repeat 4px center;
-    }
-    .z-notSel{color:#aaa};
-</style>
-<section id="player" class="mt-2 d-none d-lg-block" >
+<section class="mt-2 d-none d-lg-block" style="background: #6a296e">
     <div class="container">
         <div class="row">
             <div class="col">
-                <div id="lunbo" class="carousel">
-                    <a class="carousel-item active" href="#" data-color="#6a296e" target="_blank"><img src="image/scenery_1.jpg" class="d-block w-100" alt=""></a>
-                    <a class="carousel-item" href="#" data-color="#5600d3"  target="_blank"><img src="image/scenery_2.jpg" class="d-block w-100" alt=""></a>
-                    <a class="carousel-item" href="#" data-color="#0b0f3e" target="_blank"><img src="image/scenery_3.jpg" class="d-block w-100" alt=""></a>
-                    <a class="carousel-item" href="#" data-color="#100e64" target="_blank"><img src="image/scenery_4.jpg" class="d-block w-100" alt=""></a>
-                    <a class="carousel-item" href="#" data-color="#4477e2" target="_blank"><img src="image/scenery_5.jpg" class="d-block w-100" alt=""></a>
-                    <a class="carousel-item" href="#" data-color="#110e45" target="_blank"><img src="image/scenery_1.jpg" class="d-block w-100" alt=""></a>
+                <div class="carousel">
+                    <a class="carousel-item active" href="" target="_blank"><img src="image/scenery_1.jpg" class="d-block w-100" alt=""></a>
+                    <a class="carousel-item" href="" target="_blank"><img src="image/scenery_2.jpg" class="d-block w-100" alt=""></a>
+                    <a class="carousel-item" href="" target="_blank"><img src="image/scenery_3.jpg" class="d-block w-100" alt=""></a>
+                    <a class="carousel-item" href="" target="_blank"><img src="image/scenery_4.jpg" class="d-block w-100" alt=""></a>
+                    <a class="carousel-item" href="" target="_blank"><img src="image/scenery_5.jpg" class="d-block w-100" alt=""></a>
+                    <a class="carousel-item" href="" target="_blank"><img src="image/scenery_1.jpg" class="d-block w-100" alt=""></a>
                 </div>
                 <div class="card w-25 mt-4 py-3 border-0 ml-auto shadow" style="font-size: 15px; background: rgba(0,0,0,0.4);line-height: 15px;">
-                    <div id="rList" class="list-group">
+                    <div class="list-group">
                         <a href="#" class="list-group-item text-truncate border-0 bg-transparent text-white-50 text-decoration-none">谦虚使人进步，骄傲使人落后</a>
                         <a href="#" class="list-group-item text-truncate border-0 bg-transparent text-white-50 text-decoration-none">谦虚使人进步，骄傲使人落后</a>
                         <a href="#" class="list-group-item text-truncate border-0 bg-transparent text-white-50 text-decoration-none">谦虚使人进步，骄傲使人落后</a>
@@ -500,23 +492,9 @@
                 </div>
             </div>
         </div>
-        <div class="row d-none d-lg-block">
+        <div class="row">
             <div class="col">
 
-            </div>
-        </div>
-        <div class="row d-lg-none">
-            <div class="col">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="image/scenery_1.jpg" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="image/scenery_2.jpg" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="image/scenery_3.jpg" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="image/scenery_4.jpg" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="image/scenery_5.jpg" class="img-fluid" alt=""></div>
-                        <div class="swiper-slide"><img src="image/scenery.jpg" class="img-fluid" alt=""></div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -565,73 +543,7 @@
 
 
 
+<script src="js/bootstrap.bundle.min.js"/>
 <script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-
-<!--轮播特效-->
-<script>
-    $(function(){
-        var ptimer = null;
-        var i = 0;//制定一个序号
-        var sum = $("#lunbo a").length;
-        //开启轮播
-        function startLunbo(){
-            var bagcolor = $("#lunbo>a").eq(i).attr("data-color");
-
-            $("#lunbo>a").eq(i).fadeIn().siblings().fadeOut(900,function () {
-                $("#player").css("backgroundColor",bagcolor);
-            });
-
-            $("#rList>a").eq(i).addClass("z-Sel text-white").removeClass("text-white-50").siblings().addClass("text-white-50")
-            .removeClass("z-Sel text-white");
-        }
-
-        $("#lunbo>a").hover(function (){
-            clearInterval(ptimer)
-        },function (){
-            carsousel();
-        });
-
-        //自动轮播函数
-        function carsousel() {
-            clearInterval(ptimer);
-            ptimer = setInterval(function () {
-                i++;
-                if(i == sum){
-                  i = 0;
-                }
-                startLunbo();
-            },2000)
-        }
-        var bagcolor = $("#lunbo>a").eq(0).attr("data-color");
-        $("#player").css("backgroundColor",bagcolor);
-        $("#rList>a").eq(0).addClass("z-Sel text-white").removeClass("text-white-50")
-        //开始自动轮播
-        carsousel();
-
-        var htimer = null;
-
-
-        $("#rList>a").mouseover(function(){
-            $(this).addClass("text-danger");
-            var obj = $(this);
-            htimer = setTimeout(function () {
-                clearInterval(ptimer);
-                i = obj.index();
-                startLunbo();
-            },500)
-
-
-        }).mouseout(function(){
-            $(this).removeClass("text-danger");
-            clearTimeout(htimer);
-            carsousel();
-        });
-    });
-</script>
-<script src="js/swiper.js"></script>
-<script>
-    var swiper = new Swiper('.swiper-container');
-</script>
 </body>
 </html>
