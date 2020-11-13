@@ -1,2 +1,2 @@
-# website
-myricemi
+# web
+myricemi网站主页
